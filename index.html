@@ -30,25 +30,25 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 12px;
+      padding: 10px;
     }
 
     .card {
       width: 100%;
-      max-width: 420px;
-      max-height: calc(100dvh - 24px);
+      max-width: 430px;
+      max-height: calc(100dvh - 20px);
       background: rgba(255, 255, 255, 0.98);
       border: 1px solid #eeeeee;
       border-radius: 30px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
-      padding: 18px 20px 14px;
+      box-shadow: 0 22px 55px rgba(0, 0, 0, 0.13);
+      padding: 20px 22px 16px;
       text-align: center;
     }
 
     .logo-wrap {
-      width: 108px;
-      height: 108px;
-      margin: 0 auto 10px;
+      width: 112px;
+      height: 112px;
+      margin: 0 auto 12px;
       border-radius: 50%;
       padding: 5px;
       background: #ffffff;
@@ -65,28 +65,28 @@
     }
 
     h1 {
-      font-size: 21px;
+      font-size: 22px;
       line-height: 1.18;
-      margin: 0 0 5px;
+      margin: 0 0 6px;
       color: #111111;
       font-weight: 800;
       letter-spacing: -0.3px;
     }
 
     .subtitle {
-      font-size: 13px;
+      font-size: 13.5px;
       line-height: 1.35;
       color: #555555;
-      margin: 0 0 13px;
+      margin: 0 0 14px;
     }
 
     .buttons {
       width: 100%;
-      max-width: 330px;
+      max-width: 350px;
       margin: 10px auto 0;
       display: grid;
       grid-template-columns: 1fr;
-      gap: 8px;
+      gap: 9px;
     }
 
     .button {
@@ -94,12 +94,12 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-      min-height: 39px;
-      padding: 9px 16px;
+      min-height: 42px;
+      padding: 10px 16px;
       border-radius: 999px;
       text-decoration: none;
       font-weight: 700;
-      font-size: 15px;
+      font-size: 15.5px;
       color: #ffffff;
       box-shadow: 0 7px 15px rgba(0, 0, 0, 0.09);
       transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
@@ -142,13 +142,13 @@
 
     .address {
       width: 100%;
-      max-width: 330px;
-      margin: 10px auto 0;
-      padding: 9px 12px;
+      max-width: 350px;
+      margin: 11px auto 0;
+      padding: 10px 12px;
       border-radius: 18px;
       background: #fafafa;
       border: 1px solid #eeeeee;
-      font-size: 12px;
+      font-size: 12.5px;
       line-height: 1.35;
       color: #333333;
     }
@@ -157,64 +157,104 @@
       display: block;
       margin-bottom: 2px;
       color: #111111;
-      font-size: 12.5px;
+      font-size: 13px;
     }
 
     @media (max-width: 600px) {
       body {
-        padding: 8px;
+        padding: 6px;
       }
 
       .card {
-        max-width: 385px;
-        max-height: calc(100dvh - 16px);
-        padding: 12px 14px 10px;
-        border-radius: 26px;
+        width: 96vw;
+        max-width: 430px;
+        max-height: calc(100dvh - 12px);
+        padding: 17px 18px 14px;
+        border-radius: 28px;
       }
 
       .logo-wrap {
-        width: 86px;
-        height: 86px;
+        width: 98px;
+        height: 98px;
         padding: 4px;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        font-size: 20px;
+        line-height: 1.15;
+        margin-bottom: 5px;
+      }
+
+      .subtitle {
+        font-size: 12.5px;
+        line-height: 1.3;
+        margin-bottom: 11px;
+      }
+
+      .buttons {
+        max-width: 100%;
+        gap: 8px;
+        margin-top: 8px;
+      }
+
+      .button {
+        min-height: 41px;
+        padding: 9px 14px;
+        font-size: 15px;
+        border-radius: 999px;
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      .address {
+        max-width: 100%;
+        margin-top: 10px;
+        padding: 10px 12px;
+        font-size: 12px;
+        line-height: 1.3;
+        border-radius: 17px;
+      }
+
+      .address strong {
+        font-size: 12.5px;
+      }
+    }
+
+    @media (max-height: 720px) {
+      .card {
+        padding-top: 12px;
+        padding-bottom: 10px;
+      }
+
+      .logo-wrap {
+        width: 82px;
+        height: 82px;
         margin-bottom: 7px;
       }
 
       h1 {
         font-size: 18px;
-        line-height: 1.12;
-        margin-bottom: 4px;
       }
 
       .subtitle {
         font-size: 11.5px;
-        line-height: 1.25;
         margin-bottom: 8px;
       }
 
       .buttons {
-        max-width: 300px;
         gap: 6px;
-        margin-top: 7px;
       }
 
       .button {
         min-height: 34px;
+        font-size: 13.5px;
         padding: 7px 12px;
-        font-size: 13px;
-        box-shadow: none;
       }
 
       .address {
-        max-width: 300px;
         margin-top: 7px;
         padding: 7px 10px;
-        font-size: 10.8px;
-        line-height: 1.25;
-        border-radius: 15px;
-      }
-
-      .address strong {
-        font-size: 11.2px;
+        font-size: 11px;
       }
     }
   </style>
@@ -227,7 +267,7 @@
       <img class="logo" src="logo-syndicat.jpg" alt="Logo du Syndicat" />
     </div>
 
-
+```
 <h1>Syndicat des Patrons Coiffeurs Dames</h1>
 
 <p class="subtitle">
@@ -269,7 +309,7 @@
   Jdeideh–Bauchrieh Highway,<br />
   Maalouf Center, 4th Floor, Lebanon
 </div>
-
+```
 
   </main>
 </body>
