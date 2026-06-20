@@ -1,12 +1,16 @@
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Syndicat des Patrons Coiffeurs Dames</title>
-  <meta name="description" content="Contact officiel du Syndicate of Women’s Hair & Beauty Salon Owners in Lebanon" />
+  <meta name="description" content="Contact officiel du Syndicat des Patrons Coiffeurs Dames" />
+
   <style>
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       min-height: 100vh;
@@ -18,6 +22,7 @@
       align-items: center;
       padding: 22px;
     }
+
     .card {
       width: 100%;
       max-width: 430px;
@@ -28,6 +33,7 @@
       padding: 28px 22px 24px;
       text-align: center;
     }
+
     .logo {
       width: 156px;
       height: 156px;
@@ -37,24 +43,28 @@
       background: #fff;
       margin-bottom: 14px;
     }
+
     h1 {
       font-size: 22px;
       line-height: 1.25;
       margin: 0 0 6px;
       color: #111;
     }
+
     .subtitle {
       font-size: 14px;
       line-height: 1.5;
       color: #555;
       margin: 0 0 20px;
     }
+
     .buttons {
       display: grid;
       gap: 11px;
       margin-top: 18px;
     }
-    a.button {
+
+    .button {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -67,8 +77,16 @@
       font-size: 16px;
       color: #fff;
       transition: transform .15s ease, opacity .15s ease;
+      border: none;
+      cursor: pointer;
+      font-family: Arial, Helvetica, sans-serif;
     }
-    a.button:hover { transform: translateY(-2px); opacity: .94; }
+
+    .button:hover {
+      transform: translateY(-2px);
+      opacity: .94;
+    }
+
     .save { background: #0b7a34; }
     .whatsapp { background: #25D366; color: #062a13 !important; }
     .instagram { background: linear-gradient(135deg, #405DE6, #C13584, #F77737); }
@@ -76,6 +94,7 @@
     .email { background: #DB4437; }
     .maps { background: #111111; }
     .call { background: #d50000; }
+
     .address {
       margin-top: 18px;
       padding: 14px;
@@ -86,6 +105,7 @@
       line-height: 1.55;
       color: #333;
     }
+
     .footer {
       margin-top: 16px;
       font-size: 12px;
@@ -93,6 +113,7 @@
     }
   </style>
 </head>
+
 <body>
   <main class="card">
     <img class="logo" src="logo-syndicat.jpg" alt="Logo du Syndicat" />
@@ -101,13 +122,19 @@
     <p class="subtitle">نقابة أصحاب صالونات التزيين والتجميل للسيدات في لبنان</p>
 
     <div class="buttons">
-        <a class="button whatsapp" href="https://wa.me/96170386773" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="button instagram" href="https://www.instagram.com/syndicat_despatrons_coiffeurs?igsh=bTRza3F3emdka3Ew" target="_blank" rel="noopener">Instagram</a>
-        <a class="button facebook" href="https://www.facebook.com/share/17h2pu5Fh1/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
-        <a class="button email" href="mailto:syndicatdespatronscoiffeurs@gmail.com">Email</a>
-        <a class="button call" href="tel:+96170386773">Contact</a>
-        <a class="button maps" href="https://maps.app.goo.gl/W3ZWu7SQoEFEZP4KA" target="_blank" rel="noopener">Location</a>
-        <a class="button save" href="contact.vcf" download="Syndicat-Coiffeurs-Dames.vcf">Save the contact</a>
+      <a class="button whatsapp" href="https://wa.me/96170386773" target="_blank" rel="noopener">WhatsApp</a>
+
+      <a class="button instagram" href="https://www.instagram.com/syndicat_despatrons_coiffeurs?igsh=bTRza3F3emdka3Ew" target="_blank" rel="noopener">Instagram</a>
+
+      <a class="button facebook" href="https://www.facebook.com/share/17h2pu5Fh1/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
+
+      <a class="button email" href="mailto:syndicatdespatronscoiffeurs@gmail.com">Email</a>
+
+      <a class="button call" href="tel:+96170386773">Contact</a>
+
+      <a class="button maps" href="https://maps.app.goo.gl/W3ZWu7SQoEFEZP4KA" target="_blank" rel="noopener">Location</a>
+
+      <button class="button save" type="button" onclick="saveContact()">Save the contact</button>
     </div>
 
     <div class="address">
@@ -116,5 +143,102 @@
       Maalouf Center, 4th Floor, Lebanon
     </div>
   </main>
+
+  <script>
+    function foldLine(line) {
+      return line.match(/.{1,73}/g).join("\r\n ");
+    }
+
+    function blobToDataURL(blob) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+
+        reader.onloadend = () => resolve(reader.result);
+        reader.onerror = reject;
+
+        reader.readAsDataURL(blob);
+      });
+    }
+
+    function resizeImageToBase64(dataUrl, width, height) {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+
+        img.onload = () => {
+          const canvas = document.createElement("canvas");
+          canvas.width = width;
+          canvas.height = height;
+
+          const ctx = canvas.getContext("2d");
+
+          const scale = Math.max(width / img.width, height / img.height);
+          const x = (width - img.width * scale) / 2;
+          const y = (height - img.height * scale) / 2;
+
+          ctx.fillStyle = "#ffffff";
+          ctx.fillRect(0, 0, width, height);
+          ctx.drawImage(img, x, y, img.width * scale, img.height * scale);
+
+          const jpgDataUrl = canvas.toDataURL("image/jpeg", 0.85);
+          resolve(jpgDataUrl.split(",")[1]);
+        };
+
+        img.onerror = reject;
+        img.src = dataUrl;
+      });
+    }
+
+    async function saveContact() {
+      try {
+        const imageResponse = await fetch("logo-syndicat.jpg");
+
+        if (!imageResponse.ok) {
+          throw new Error("Logo image not found");
+        }
+
+        const imageBlob = await imageResponse.blob();
+        const imageDataUrl = await blobToDataURL(imageBlob);
+        const photoBase64 = await resizeImageToBase64(imageDataUrl, 300, 300);
+
+        const photoLine = foldLine("PHOTO;ENCODING=b;TYPE=JPEG:" + photoBase64);
+
+        const vcardLines = [
+          "BEGIN:VCARD",
+          "VERSION:3.0",
+          "N:Syndicat des Patrons Coiffeurs Dames;;;;",
+          "FN:Syndicat des Patrons Coiffeurs Dames",
+          "ORG:نقابة أصحاب صالونات التزيين والتجميل للسيدات في لبنان",
+          "TEL;TYPE=CELL,VOICE:+96170386773",
+          "EMAIL;TYPE=INTERNET:syndicatdespatronscoiffeurs@gmail.com",
+          "ADR;TYPE=WORK:;;Jdeideh-Bauchrieh Highway, Maalouf Center, 4th Floor;;;Lebanon",
+          photoLine,
+          "URL;TYPE=WhatsApp:https://wa.me/96170386773",
+          "URL;TYPE=Facebook:https://www.facebook.com/share/17h2pu5Fh1/",
+          "URL;TYPE=Instagram:https://www.instagram.com/syndicat_despatrons_coiffeurs",
+          "URL;TYPE=Google Maps:https://maps.app.goo.gl/W3ZWu7SQoEFEZP4KA",
+          "END:VCARD"
+        ];
+
+        const vcard = vcardLines.join("\r\n");
+
+        const file = new Blob([vcard], {
+          type: "text/vcard;charset=utf-8"
+        });
+
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(file);
+        link.download = "Syndicat-Coiffeurs-Dames.vcf";
+
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        URL.revokeObjectURL(link.href);
+      } catch (error) {
+        alert("The contact could not be saved. Please make sure logo-syndicat.jpg is uploaded in the same folder as index.html.");
+      }
+    }
+  </script>
 </body>
 </html>
+```
