@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,83 +9,77 @@
   <meta name="description" content="Contact officiel du Syndicat des Patrons Coiffeurs Dames" />
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html, body {
-      margin: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
+    * { box-sizing: border-box; }
 
     body {
-      min-height: 100dvh;
+      margin: 0;
+      min-height: 100vh;
       font-family: Arial, Helvetica, sans-serif;
       background: linear-gradient(160deg, #ffffff 0%, #fafafa 45%, #fff1f1 100%);
       color: #1d1d1d;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 12px;
+      padding: 22px;
     }
 
     .card {
       width: 100%;
       max-width: 430px;
-      max-height: calc(100dvh - 24px);
       background: #ffffff;
       border: 1px solid #eeeeee;
-      border-radius: 24px;
-      box-shadow: 0 14px 40px rgba(0,0,0,0.10);
-      padding: 18px 16px 16px;
+      border-radius: 28px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.10);
+      padding: 28px 22px 24px;
       text-align: center;
     }
 
     .logo {
-      width: 105px;
-      height: 105px;
+      width: 156px;
+      height: 156px;
       object-fit: cover;
       border-radius: 50%;
-      border: 3px solid #d50000;
+      border: 4px solid #d50000;
       background: #fff;
-      margin-bottom: 8px;
+      margin-bottom: 14px;
     }
 
     h1 {
-      font-size: 19px;
-      line-height: 1.2;
-      margin: 0 0 5px;
+      font-size: 22px;
+      line-height: 1.25;
+      margin: 0 0 6px;
       color: #111;
     }
 
     .subtitle {
-      font-size: 13px;
-      line-height: 1.35;
+      font-size: 14px;
+      line-height: 1.5;
       color: #555;
-      margin: 0 0 12px;
+      margin: 0 0 20px;
     }
 
     .buttons {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-      margin-top: 10px;
+      gap: 11px;
+      margin-top: 18px;
     }
 
     .button {
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 42px;
-      padding: 10px 8px;
-      border-radius: 14px;
+      gap: 10px;
+      width: 100%;
+      padding: 14px 14px;
+      border-radius: 16px;
       text-decoration: none;
       font-weight: 700;
-      font-size: 14px;
+      font-size: 16px;
       color: #fff;
       transition: transform .15s ease, opacity .15s ease;
+      border: none;
+      cursor: pointer;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     .button:hover {
@@ -92,72 +87,29 @@
       opacity: .94;
     }
 
-    .save {
-      background: #0b7a34;
-      grid-column: 1 / -1;
-    }
-
-    .whatsapp {
-      background: #25D366;
-      color: #062a13 !important;
-    }
-
-    .instagram {
-      background: linear-gradient(135deg, #405DE6, #C13584, #F77737);
-    }
-
-    .facebook {
-      background: #1877F2;
-    }
-
-    .email {
-      background: #DB4437;
-    }
-
-    .maps {
-      background: #111111;
-    }
-
-    .call {
-      background: #d50000;
-    }
+    .save { background: #0b7a34; }
+    .whatsapp { background: #25D366; color: #062a13 !important; }
+    .instagram { background: linear-gradient(135deg, #405DE6, #C13584, #F77737); }
+    .facebook { background: #1877F2; }
+    .email { background: #DB4437; }
+    .maps { background: #111111; }
+    .call { background: #d50000; }
 
     .address {
-      margin-top: 10px;
-      padding: 10px;
-      border-radius: 16px;
+      margin-top: 18px;
+      padding: 14px;
+      border-radius: 18px;
       background: #fafafa;
       border: 1px solid #eeeeee;
-      font-size: 12.5px;
-      line-height: 1.35;
+      font-size: 13.5px;
+      line-height: 1.55;
       color: #333;
     }
 
-    @media (max-height: 620px) {
-      .logo {
-        width: 82px;
-        height: 82px;
-      }
-
-      h1 {
-        font-size: 17px;
-      }
-
-      .subtitle {
-        font-size: 12px;
-        margin-bottom: 8px;
-      }
-
-      .button {
-        min-height: 36px;
-        font-size: 13px;
-        padding: 8px 6px;
-      }
-
-      .address {
-        font-size: 11.5px;
-        padding: 8px;
-      }
+    .footer {
+      margin-top: 16px;
+      font-size: 12px;
+      color: #777;
     }
   </style>
 </head>
@@ -182,7 +134,7 @@
 
       <a class="button maps" href="https://maps.app.goo.gl/W3ZWu7SQoEFEZP4KA" target="_blank" rel="noopener">Location</a>
 
-      <a class="button save" href="contact.vcf" download="Syndicat-Coiffeurs-Dames.vcf">Save the contact</a>
+      <button class="button save" type="button" onclick="saveContact()">Save the contact</button>
     </div>
 
     <div class="address">
@@ -193,3 +145,4 @@
   </main>
 </body>
 </html>
+```
