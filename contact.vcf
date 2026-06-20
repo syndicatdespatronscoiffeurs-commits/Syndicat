@@ -2,10 +2,17 @@ BEGIN:VCARD
 VERSION:3.0
 N:Syndicat des Patrons Coiffeurs Dames;;;;
 FN:Syndicat des Patrons Coiffeurs Dames
-ORG:Syndicate of Women's Hair & Beauty Salon Owners in Lebanon
+ORG:نقابة أصحاب صالونات التزيين والتجميل للسيدات في لبنان
 TEL;TYPE=CELL,VOICE:+96170386773
 EMAIL;TYPE=INTERNET:syndicatdespatronscoiffeurs@gmail.com
 ADR;TYPE=WORK:;;Jdeideh-Bauchrieh Highway, Maalouf Center, 4th Floor;;;Lebanon
-URL;TYPE=Website:https://samirhabr.github.io/syndicat/
+PHOTO;VALUE=URI:https://syndicatdespatronscoiffeurs-commits.github.io/Syndicat/logo-syndicat.jpg
+URL;TYPE=Website:https://syndicatdespatronscoiffeurs-commits.github.io/Syndicat/
+URL;TYPE=WhatsApp:https://wa.me/96170386773
+URL;TYPE=Facebook:https://www.facebook.com/share/17h2pu5Fh1/
+URL;TYPE=Instagram:https://www.instagram.com/syndicat_despatrons_coiffeurs
+URL;TYPE=Google Maps:https://maps.app.goo.gl/W3ZWu7SQoEFEZP4KA
+X-SOCIALPROFILE;TYPE=facebook:https://www.facebook.com/share/17h2pu5Fh1/
+X-SOCIALPROFILE;TYPE=instagram:https://www.instagram.com/syndicat_despatrons_coiffeurs
 NOTE:WhatsApp: https://wa.me/96170386773\nFacebook: https://www.facebook.com/share/17h2pu5Fh1/\nInstagram: https://www.instagram.com/syndicat_despatrons_coiffeurs\nLocation: https://maps.app.goo.gl/W3ZWu7SQoEFEZP4KA
 END:VCARD
