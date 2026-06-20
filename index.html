@@ -29,7 +29,6 @@
       justify-content: center;
       align-items: center;
       padding: 10px;
-      overflow: hidden;
     }
 
     .card {
@@ -70,6 +69,7 @@
 
     .buttons {
       display: grid;
+      grid-template-columns: 1fr;
       gap: 9px;
       margin-top: 10px;
     }
@@ -94,10 +94,6 @@
       opacity: .94;
     }
 
-    .save {
-      background: #0b7a34;
-    }
-
     .whatsapp {
       background: #25D366;
       color: #062a13 !important;
@@ -115,12 +111,16 @@
       background: #DB4437;
     }
 
+    .call {
+      background: #d50000;
+    }
+
     .maps {
       background: #111111;
     }
 
-    .call {
-      background: #d50000;
+    .save {
+      background: #0b7a34;
     }
 
     .address {
@@ -147,43 +147,39 @@
       }
 
       .logo {
-        width: 78px;
-        height: 78px;
-        margin-bottom: 6px;
+        width: 76px;
+        height: 76px;
+        margin-bottom: 5px;
         border: 3px solid #d50000;
       }
 
       h1 {
         font-size: 17px;
         line-height: 1.12;
-        margin-bottom: 4px;
+        margin-bottom: 3px;
       }
 
       .subtitle {
         font-size: 11px;
-        line-height: 1.25;
-        margin-bottom: 7px;
+        line-height: 1.2;
+        margin-bottom: 6px;
       }
 
       .buttons {
-        grid-template-columns: 1fr 1fr;
-        gap: 6px;
-        margin-top: 7px;
+        grid-template-columns: 1fr;
+        gap: 5px;
+        margin-top: 6px;
       }
 
       a.button {
-        min-height: 34px;
-        padding: 7px 6px;
+        min-height: 31px;
+        padding: 6px 8px;
         font-size: 12.5px;
-        border-radius: 12px;
-      }
-
-      .save {
-        grid-column: 1 / -1;
+        border-radius: 11px;
       }
 
       .address {
-        margin-top: 7px;
+        margin-top: 6px;
         padding: 7px;
         font-size: 10.5px;
         line-height: 1.25;
@@ -240,6 +236,7 @@
   Jdeideh–Bauchrieh Highway,<br />
   Maalouf Center, 4th Floor, Lebanon
 </div>
+
 
   </main>
 </body>
