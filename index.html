@@ -45,29 +45,30 @@
     }
 
 .logo-wrap {
-  width: 150px;
-  height: 150px;
+  width: 115px;
+  height: 115px;
   margin: 0 auto 14px;
-  border-radius: 50%;
-  overflow: hidden;
   background: transparent;
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
+  padding: 0;
+  overflow: visible;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .logo-wrap img {
-  width: 165px;
-  height: 165px;
-  object-fit: cover;
+  width: 115px;
+  height: 115px;
+  object-fit: contain;
   object-position: center;
   display: block;
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
+  background: transparent;
   mix-blend-mode: multiply;
 }
     h1 {
@@ -169,60 +170,69 @@
 
     @media (max-width: 600px) {
       body {
-        padding: 6px;
+        padding: 10px;
         align-items: flex-start;
       }
 
       .card {
-        width: 96vw;
-        max-width: 430px;
-        padding: 12px 18px 14px;
-        border-radius: 28px;
-      }
+    width: 100%;
+    max-width: 390px;
+    margin-top: 10px;
+    padding: 22px 18px 18px;
+    border-radius: 26px;
+  }
 
     .logo-wrap {
-  width: 110px;
-  height: 110px;
-  margin-bottom: 10px;
-}
+    width: 105px;
+    height: 105px;
+    margin-bottom: 14px;
+  }
 
-.logo-wrap img {
-  width: 110px;
-  height: 110px;
-}
+  .logo-wrap img {
+    width: 105px;
+    height: 105px;
+  }
 
-      h1 {
-        font-size: clamp(13px, 3.7vw, 15.5px);
-      }
+       h1 {
+    font-size: 18px;
+    line-height: 1.25;
+    margin: 0 0 8px;
+    font-weight: 800;
+    white-space: normal;
+  }
+
 
       .subtitle {
-        font-size: 12.5px;
-        line-height: 1.3;
-        margin-bottom: 11px;
-      }
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+  }
 
       .buttons {
-        max-width: 100%;
-        gap: 8px;
-        margin-top: 8px;
-      }
+    max-width: 100%;
+    gap: 10px;
+    margin-top: 8px;
+  }
 
       .button {
-        min-height: 41px;
-        padding: 9px 14px;
-        font-size: 15px;
-      }
+    min-height: 54px;
+    padding: 12px 16px;
+    font-size: 17px;
+    border-radius: 999px;
+  }
+
 
       .address {
-        max-width: 100%;
-        margin-top: 10px;
-        padding: 10px 12px;
-        font-size: 12px;
-        line-height: 1.3;
-      }
+    max-width: 100%;
+    margin-top: 14px;
+    padding: 13px 12px;
+    font-size: 13px;
+    line-height: 1.35;
+    border-radius: 18px;
+  }
 
       .address strong {
-        font-size: 12.5px;
+        font-size: 14px;
       }
     }
 
