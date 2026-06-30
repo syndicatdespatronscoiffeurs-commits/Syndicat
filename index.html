@@ -45,53 +45,55 @@
         linear-gradient(145deg, #ffffff 0%, #f8f8f8 52%, #fff4f4 100%);
     }
 
-    .card {
-      width: 100%;
-      max-width: 380px;
-      max-height: calc(100dvh - 24px);
-      padding: 18px 18px 16px;
-      text-align: center;
-      background: var(--card);
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(14px);
-      overflow: hidden;
-    }
+   .card {
+  width: 100%;
+  max-width: 760px;
+  max-height: calc(100dvh - 24px);
+  padding: 28px 32px 24px;
+  text-align: center;
+  background: var(--card);
+  border-radius: 34px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+  overflow: hidden;
+}
 
     .logo-wrap {
-      width: 92px;
-      height: 92px;
-      margin: 0 auto 12px;
-      padding: 0;
-      border: none;
-      outline: none;
-      box-shadow: none;
-      background: transparent;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+  width: 95px;
+  height: 95px;
+  margin: 0 auto 18px;
+  padding: 0;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  border-radius: 50%;
+  overflow: hidden;
+}
 
-    .logo-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-      border: none;
-      outline: none;
-      box-shadow: none;
-      background: transparent;
-    }
+.logo-wrap img {
+  width: 112%;
+  height: 112%;
+  object-fit: cover;
+  display: block;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  border-radius: 50%;
+  clip-path: circle(48% at 50% 50%);
+  transform: translate(-5%, -5%);
+}
 
-    h1 {
-      margin: 0 0 6px;
-      font-size: 19px;
-      line-height: 1.15;
-      font-weight: 850;
-      letter-spacing: -0.4px;
-      color: #101010;
-    }
-
+   h1 {
+  margin: 0 0 8px;
+  font-size: clamp(18px, 2.2vw, 26px);
+  line-height: 1.15;
+  font-weight: 850;
+  letter-spacing: -0.5px;
+  color: #101010;
+  white-space: nowrap;
+}
     .subtitle {
       margin: 0 auto 14px;
       max-width: 320px;
