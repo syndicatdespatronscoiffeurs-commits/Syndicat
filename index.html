@@ -48,15 +48,28 @@
   width: 130px;
   height: 130px;
   margin: 0 auto 8px;
-  background-image: url("./logosyndicat.jpg");
-  background-size: 130px 130px;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: transparent;
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
   padding: 0;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-wrap img {
+  width: 145px;
+  height: 145px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent;
+  margin: 0;
   mix-blend-mode: multiply;
 }
     h1 {
@@ -259,6 +272,7 @@
 <body>
   <main class="card">
     <div class="logo-wrap">
+      <img class="logo" src="./logosyndicat.jpg" alt="Logo du Syndicat" />
     </div>
 
     <h1>Syndicat Des Patrons Coiffeurs Pour Dames</h1>
