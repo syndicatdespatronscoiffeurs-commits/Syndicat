@@ -43,31 +43,32 @@
       text-align: center;
     }
 .logo-wrap {
-  width: 155px;
-  height: 155px;
+  width: 150px;
+  height: 150px;
   margin: 0 auto 8px;
   background: transparent;
-  border: 0 !important;
-  outline: 0 !important;
+  border: none !important;
+  outline: none !important;
   box-shadow: none !important;
   padding: 0;
   overflow: hidden;
   border-radius: 50%;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
-  width: 125%;
-  height: 125%;
-  object-fit: cover;
+  width: 108%;
+  height: 108%;
+  object-fit: contain;
   object-position: center;
   display: block;
-  border: 0 !important;
-  outline: 0 !important;
+  border: none !important;
+  outline: none !important;
   box-shadow: none !important;
-  position: absolute;
-  top: -12.5%;
-  left: -12.5%;
+  background: transparent;
+  clip-path: circle(48% at 50% 50%);
 }
 
     h1 {
