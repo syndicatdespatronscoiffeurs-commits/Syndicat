@@ -52,28 +52,30 @@
     }
 
     .logo-wrap {
-  width: 86px;
-  height: 86px;
+  width: 90px;
+  height: 90px;
   margin: 0 auto 12px;
   padding: 0;
+  background: transparent !important;
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
-  background: transparent !important;
-  overflow: visible;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
-    .logo-wrap img {
-  width: 86px;
-  height: 86px;
+.logo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  object-fit: contain;
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
   background: transparent !important;
+  border-radius: 50%;
+  clip-path: circle(50% at 50% 50%);
 }
-
 h1 {
   margin: 0 0 7px;
   font-size: clamp(15px, 2vw, 22px);
