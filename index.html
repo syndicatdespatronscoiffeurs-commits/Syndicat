@@ -5,17 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Syndicat Des Patrons Coiffeurs Pour Dames</title>
-  <meta name="description" content="Syndicat des Patrons Coiffeurs Pour Dames" />
 
   <style>
     :root {
-      --red: #c40000;
-      --dark-red: #970000;
-      --text: #171717;
-      --muted: #666666;
-      --card: rgba(255, 255, 255, 0.97);
-      --border: rgba(0, 0, 0, 0.08);
-      --shadow: 0 18px 55px rgba(0, 0, 0, 0.12);
+      --text: #151515;
+      --muted: #666;
+      --card: rgba(255, 255, 255, 0.96);
+      --shadow: 0 22px 65px rgba(0, 0, 0, 0.13);
     }
 
     * {
@@ -38,113 +34,99 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 12px;
+      padding: 14px;
       background:
-        radial-gradient(circle at top left, rgba(196, 0, 0, 0.12), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(214, 168, 79, 0.15), transparent 32%),
+        radial-gradient(circle at top left, rgba(196, 0, 0, 0.12), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(214, 168, 79, 0.16), transparent 34%),
         linear-gradient(145deg, #ffffff 0%, #f8f8f8 52%, #fff4f4 100%);
     }
 
-   .card {
-  width: 100%;
-  max-width: 760px;
-  max-height: calc(100dvh - 24px);
-  padding: 28px 32px 24px;
-  text-align: center;
-  background: var(--card);
-  border-radius: 34px;
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(14px);
-  overflow: hidden;
-}
+    .card {
+      width: min(100%, 720px);
+      padding: 22px 28px 18px;
+      text-align: center;
+      background: var(--card);
+      border-radius: 34px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
 
     .logo-wrap {
-  width: 95px;
-  height: 95px;
-  margin: 0 auto 18px;
-  padding: 0;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  background: transparent !important;
-  border-radius: 50%;
-  overflow: hidden;
-}
+      width: 88px;
+      height: 88px;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: transparent;
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
 
-.logo-wrap img {
-  width: 112%;
-  height: 112%;
-  object-fit: cover;
-  display: block;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  background: transparent !important;
-  border-radius: 50%;
-  clip-path: circle(48% at 50% 50%);
-  transform: translate(-5%, -5%);
-}
+    .logo-wrap img {
+      width: 118%;
+      height: 118%;
+      object-fit: cover;
+      display: block;
+      transform: translate(-7.5%, -7.5%);
+      border-radius: 50%;
+      clip-path: circle(47% at 50% 50%);
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
 
-   h1 {
-  margin: 0 0 8px;
-  font-size: clamp(18px, 2.2vw, 26px);
-  line-height: 1.15;
-  font-weight: 850;
-  letter-spacing: -0.5px;
-  color: #101010;
-  white-space: nowrap;
-}
+    h1 {
+      margin: 0 0 7px;
+      font-size: clamp(17px, 2.2vw, 24px);
+      line-height: 1.1;
+      font-weight: 850;
+      letter-spacing: -0.4px;
+      white-space: nowrap;
+      color: #0f0f0f;
+    }
+
     .subtitle {
-      margin: 0 auto 14px;
-      max-width: 320px;
+      margin: 0 auto 16px;
       font-size: 13px;
-      line-height: 1.45;
+      line-height: 1.4;
       color: var(--muted);
     }
 
     .buttons {
-      width: 100%;
       display: grid;
       gap: 8px;
+      width: 100%;
+      max-width: 620px;
+      margin: 0 auto;
     }
 
     .button {
       position: relative;
-      width: 100%;
-      min-height: 43px;
-      padding: 9px 16px;
-      border-radius: 15px;
+      min-height: 42px;
+      padding: 8px 42px 8px 18px;
+      border-radius: 16px;
       text-decoration: none;
-      color: #ffffff;
+      color: #fff;
       font-weight: 800;
-      font-size: 14.5px;
+      font-size: 15px;
       display: flex;
       align-items: center;
       justify-content: center;
       box-shadow: 0 7px 16px rgba(0, 0, 0, 0.10);
-      transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
     }
 
     .button::after {
       content: "›";
       position: absolute;
-      right: 16px;
-      font-size: 22px;
+      right: 18px;
+      font-size: 24px;
       line-height: 1;
-      opacity: 0.7;
-    }
-
-    .button:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.14);
-    }
-
-    .button:active {
-      transform: scale(0.98);
+      opacity: 0.75;
     }
 
     .whatsapp {
-      background: linear-gradient(135deg, #20bd61, #128c45);
+      background: linear-gradient(135deg, #21c063, #128c45);
     }
 
     .instagram {
@@ -164,7 +146,7 @@
     }
 
     .maps {
-      background: linear-gradient(135deg, #252525, #050505);
+      background: linear-gradient(135deg, #242424, #050505);
     }
 
     .save {
@@ -173,97 +155,56 @@
 
     .address {
       width: 100%;
-      margin: 12px auto 0;
-      padding: 11px 13px;
+      max-width: 620px;
+      margin: 10px auto 0;
+      padding: 10px 14px;
       border-radius: 18px;
-      background: #ffffff;
-      border: 1px solid var(--border);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
       font-size: 12.5px;
       line-height: 1.4;
-      color: #3f3f3f;
+      color: #444;
     }
 
     .address strong {
       display: block;
       margin-bottom: 3px;
-      color: #111111;
-      font-size: 13.5px;
+      color: #111;
+      font-size: 14px;
     }
 
     @media (max-width: 600px) {
       .card {
-        max-width: 360px;
-        padding: 16px 15px 14px;
-        border-radius: 24px;
+        width: 100%;
+        padding: 18px 14px 14px;
+        border-radius: 26px;
       }
 
       .logo-wrap {
-        width: 82px;
-        height: 82px;
+        width: 76px;
+        height: 76px;
         margin-bottom: 10px;
       }
 
       h1 {
-        font-size: 17px;
+        font-size: clamp(12px, 3.7vw, 17px);
+        white-space: nowrap;
       }
 
       .subtitle {
-        font-size: 12.5px;
+        font-size: 12px;
         margin-bottom: 12px;
       }
 
-      .buttons {
-        gap: 7px;
-      }
-
       .button {
-        min-height: 40px;
+        min-height: 39px;
         font-size: 14px;
         border-radius: 14px;
       }
 
       .address {
-        margin-top: 10px;
-        padding: 9px 11px;
-        font-size: 12px;
-      }
-    }
-
-    @media (max-height: 650px) {
-      .card {
-        padding: 12px 14px;
-      }
-
-      .logo-wrap {
-        width: 70px;
-        height: 70px;
-        margin-bottom: 8px;
-      }
-
-      h1 {
-        font-size: 16px;
-      }
-
-      .subtitle {
         font-size: 11.5px;
-        margin-bottom: 9px;
-      }
-
-      .buttons {
-        gap: 6px;
-      }
-
-      .button {
-        min-height: 36px;
-        font-size: 13px;
-        padding: 7px 14px;
-      }
-
-      .address {
-        margin-top: 8px;
         padding: 8px 10px;
-        font-size: 11.5px;
       }
     }
   </style>
@@ -271,6 +212,7 @@
 
 <body>
   <main class="card">
+
     <div class="logo-wrap">
       <img src="./logosyndicat.jpg" alt="Logo du Syndicat" />
     </div>
@@ -316,6 +258,7 @@
       Jdeideh–Bauchrieh Highway,<br />
       Maalouf Center, 4th Floor, Lebanon
     </div>
+
   </main>
 </body>
 </html>
