@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -16,8 +15,7 @@
     html, body {
       margin: 0;
       width: 100%;
-      height: 100%;
-      overflow: hidden;
+      min-height: 100%;
     }
 
     body {
@@ -31,12 +29,12 @@
       justify-content: center;
       align-items: center;
       padding: 10px;
+      overflow-y: auto;
     }
 
     .card {
       width: 100%;
       max-width: 430px;
-      max-height: calc(100dvh - 20px);
       background: rgba(255, 255, 255, 0.98);
       border: 1px solid #eeeeee;
       border-radius: 30px;
@@ -46,21 +44,30 @@
     }
 
     .logo-wrap {
-      width: 175px;
-      height: 175px;
+      width: 150px;
+      height: 150px;
       margin: 0 auto 8px;
       background: transparent;
-      border: none;
+      border: 0;
+      outline: 0;
       box-shadow: none;
       padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
     }
 
     .logo {
       width: 100%;
       height: 100%;
       object-fit: contain;
-      border-radius: 0;
       display: block;
+      border: 0;
+      outline: 0;
+      box-shadow: none;
+      background: transparent;
+      mix-blend-mode: multiply;
     }
 
     h1 {
@@ -162,19 +169,19 @@
     @media (max-width: 600px) {
       body {
         padding: 6px;
+        align-items: flex-start;
       }
 
       .card {
         width: 96vw;
         max-width: 430px;
-        max-height: calc(100dvh - 12px);
         padding: 12px 18px 14px;
         border-radius: 28px;
       }
 
       .logo-wrap {
-        width: 150px;
-        height: 150px;
+        width: 135px;
+        height: 135px;
         margin-bottom: 6px;
       }
 
@@ -200,8 +207,6 @@
         min-height: 41px;
         padding: 9px 14px;
         font-size: 15px;
-        border-radius: 999px;
-        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
       }
 
       .address {
@@ -210,7 +215,6 @@
         padding: 10px 12px;
         font-size: 12px;
         line-height: 1.3;
-        border-radius: 17px;
       }
 
       .address strong {
@@ -219,14 +223,20 @@
     }
 
     @media (max-height: 720px) {
+      body {
+        align-items: flex-start;
+      }
+
       .card {
+        margin-top: 8px;
+        margin-bottom: 8px;
         padding-top: 10px;
         padding-bottom: 10px;
       }
 
       .logo-wrap {
-        width: 120px;
-        height: 120px;
+        width: 115px;
+        height: 115px;
         margin-bottom: 6px;
       }
 
@@ -256,7 +266,6 @@
       }
     }
   </style>
-
 </head>
 
 <body>
@@ -265,49 +274,47 @@
       <img class="logo" src="./logosyndicat.jpg" alt="Logo du Syndicat" />
     </div>
 
+    <h1>Syndicat Des Patrons Coiffeurs Pour Dames</h1>
 
-<h1>Syndicat Des Patrons Coiffeurs Pour Dames</h1>
+    <p class="subtitle">
+      نقابة أصحاب صالونات التزيين والتجميل للسيدات في لبنان
+    </p>
 
-<p class="subtitle">
-  نقابة أصحاب صالونات التزيين والتجميل للسيدات في لبنان
-</p>
+    <div class="buttons">
+      <a class="button whatsapp" href="https://wa.me/96170386773" target="_blank" rel="noopener">
+        WhatsApp
+      </a>
 
-<div class="buttons">
-  <a class="button whatsapp" href="https://wa.me/96170386773" target="_blank" rel="noopener">
-    WhatsApp
-  </a>
+      <a class="button instagram" href="https://www.instagram.com/syndicat_despatrons_coiffeurs?igsh=bTRza3F3emdka3Ew" target="_blank" rel="noopener">
+        Instagram
+      </a>
 
-  <a class="button instagram" href="https://www.instagram.com/syndicat_despatrons_coiffeurs?igsh=bTRza3F3emdka3Ew" target="_blank" rel="noopener">
-    Instagram
-  </a>
+      <a class="button facebook" href="https://www.facebook.com/share/17h2pu5Fh1/?mibextid=wwXIfr" target="_blank" rel="noopener">
+        Facebook
+      </a>
 
-  <a class="button facebook" href="https://www.facebook.com/share/17h2pu5Fh1/?mibextid=wwXIfr" target="_blank" rel="noopener">
-    Facebook
-  </a>
+      <a class="button email" href="mailto:syndicatdespatronscoiffeurs@gmail.com">
+        Email
+      </a>
 
-  <a class="button email" href="mailto:syndicatdespatronscoiffeurs@gmail.com">
-    Email
-  </a>
+      <a class="button call" href="tel:+96170386773">
+        Contact
+      </a>
 
-  <a class="button call" href="tel:+96170386773">
-    Contact
-  </a>
+      <a class="button maps" href="https://maps.app.goo.gl/W3ZWu7SQoEFEZP4KA" target="_blank" rel="noopener">
+        Location
+      </a>
 
-  <a class="button maps" href="https://maps.app.goo.gl/W3ZWu7SQoEFEZP4KA" target="_blank" rel="noopener">
-    Location
-  </a>
+      <a class="button save" href="contact.vcf" download="Syndicat-Coiffeurs-Dames.vcf">
+        Save the contact
+      </a>
+    </div>
 
-  <a class="button save" href="contact.vcf" download="Syndicat-Coiffeurs-Dames.vcf">
-    Save the contact
-  </a>
-</div>
-
-<div class="address">
-  <strong>Adresse</strong>
-  Jdeideh–Bauchrieh Highway,<br />
-  Maalouf Center, 4th Floor, Lebanon
-</div>
-
+    <div class="address">
+      <strong>Adresse</strong>
+      Jdeideh–Bauchrieh Highway,<br />
+      Maalouf Center, 4th Floor, Lebanon
+    </div>
   </main>
 </body>
 </html>
