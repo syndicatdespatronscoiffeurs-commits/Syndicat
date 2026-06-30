@@ -45,29 +45,32 @@
     }
 
 .logo-wrap {
-  width: 155px;
-  height: 155px;
+  width: 160px;
+  height: 160px;
   margin: 0 auto 8px;
-  background-image: url("./logosyndicat.jpg");
-  background-size: 108%;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: transparent;
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
   padding: 0;
-  overflow: hidden;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .logo {
-  width: 155px;
-  height: 155px;
-  object-fit: cover;
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
   object-position: center;
   display: block;
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
   background: transparent;
+  margin: 0;
+  clip-path: none;
 }
     h1 {
       font-size: clamp(14px, 4vw, 18px);
